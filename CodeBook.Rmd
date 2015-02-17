@@ -1,0 +1,59 @@
+---
+title: "CodeBook"
+output: html_document
+---
+## About run_analysis
+
+### Data Set Information
+
+The dataset and project description is available from the University of California, Irvine
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The data originates from experiments carried out on 30 volunteers between the ages of 19-48 years. Six activities were tracked for (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) while wearing a smartphone (Samsung Galaxy S II) on the waist. The experiments were video-recorded to label the data manually. The obtained dataset was partitioned into two sets, where 70%  was selected for the training data and 30% for the test data. 
+
+
+### run_analysis Steps
+
+run_analysis executes several steps to arrive at a final tidy data set. Training and test data are read into table variables using read.table() function. Once the data has been read in,  rbind() function is called to bind the rows of the sets together. Next the features of teh data are read in and the column names are corrected.   This portion of the script uses grep() to extract the names from features.txt where the column name is like std and mean.   Finally,  the the function cbind() is used to bind all the data to a "merged_data" set and ddply gives us the final tidy_data set.   This tidy_data set is then written out as "tidy_activity_data.txt".  
+
+
+#### variables
+
+x_data_train,
+
+y_data_train
+
+subject_data_train
+
+x_data_test
+
+y_data_test
+
+subject_data_test
+
+x_bound_data
+
+y_bound_data
+
+subject_bound_data
+
+stat_features
+
+activity_labels
+
+merged_data
+
+tidy_data
+
+Further documentation is commented into the script run_analysis.R
+
+### References
+
+Human Activity Recognition Using Smartphones Data Set. URL: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+
+```{r}
+
+
+```
+
